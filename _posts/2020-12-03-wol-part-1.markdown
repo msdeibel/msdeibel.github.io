@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "Working Out Loud - Part 1"
+date:   2020-12-02 21:09:06 +0100
+categories: blog
+---
+Am gestrigen Sonntag habe ich zusammen mit vier weiteren Teilnehmern den vorletzten Termin unseres "Working Out Loud" Zirkels beendet.
+About two weeks I and four other members we finished our first "Working Out Loud" circle.
+
+For all the five of us it was a completely new way to work on a personal goal while having a constant exchange with other people. 
+Most of us didn't know each other three months ago.
+
+# What is Working Out Loud (WOL)
+WOL was developed by John Stepper, to give employees of big companies the possibility to work on self development in small groups.
+The limited size of this peer group makes it easier to build deeper relationships much faster and come to better exchanges quicker.
+
+Each employee is motivated and when the group is made up of cross-deparment, also the company benefits from the newly found relations
+that wouldn't have occured without a circle
+
+John stepper describe it on the WOL Homepage:
+
+>Working Out Loud is a way to build relationships that help you achieve a goal, develop a skill, or explore a new topic. 
+Instead of networking to get something, you invest in relationships by making contributions over time, including your work 
+and experiences that you make visible.
+
+Source:  https://workingoutloud.com/de/about  
+
+# How did I get to know WOL?
+The first time I heard about Working Out Loud was two or three years ago. My brother had just started his first circle, of which the members
+still meet these days, support and learn from each other.
+
+Back then this topic wasn't of any interest for me, but after starting a new job I had a goal that I could focus on.
+
+Alas, not only new years resolutions have the tendency to be left for dead quite quickly, but also goals you come up with during the course
+of the year.
+
+After getting some feedback from my brother I decided to give WOL a chance.
+
+# How did I find interested people?
+Since I wanted to work on a technical skill I had to starting points for my search. The first one was the Software Crafters Slack Channel
+and the second one was Twitter. I posted a short message to the main Slack channel and dropped of a tweet and waited.
+
+About a week later I had five people who were interested in starting a circle and shortly after we planned our first meeting.
+
+# What's to come
+In the second part I'll get into the details on how our meetings went, what I learned and what else the WOL circle did for me.
