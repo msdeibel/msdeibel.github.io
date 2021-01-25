@@ -19,7 +19,7 @@ Probably the medical condition in this area known to most people is [Carpal Tunn
 It comes down to
 >[...] numbness, tingling, or burning sensations in the thumb and fingers, in particular the index and middle fingers and radial half of the ring finger, because these receive their sensory and motor function (muscle control) from the median nerve. Ache and discomfort can possibly be felt more proximally in the forearm or even the upper arm. 
 
-Source: http://en.wikipedia.org/wiki/Carpal_tunnel_syndrome
+Source: [http://en.wikipedia.org/wiki/Carpal_tunnel_syndrome](http://en.wikipedia.org/wiki/Carpal_tunnel_syndrome)
 
 If you have these symptoms you should **act immediately** and see doctor. Untreated the condition can worsen to a point where it can only be treated with surgery or it can even become cronical.
 
