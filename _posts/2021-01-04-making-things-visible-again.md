@@ -2,7 +2,7 @@
 layout: post
 title:  "Making things visible again"
 date:   2021-01-04 08:55:06 +0100
-categories: career
+categories: career en
 ---
 In the [December 23, 2020 show](https://developertea.simplecast.com/episodes/making-things-invisible) of the [Developer Tea podcast](https://spec.fm/podcasts/developer-tea), [Jonathan Cutrell (@jcutrell)](https://twitter.com/jcutrell) talks about how our brain makes things invisible to ourselves.
 

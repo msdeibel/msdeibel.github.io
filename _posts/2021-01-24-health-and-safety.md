@@ -2,7 +2,7 @@
 layout: post
 title:  "Health and Safety"
 date:   2021-01-24 07:43:23 +0100
-categories: career tools
+categories: career tools en
 ---
 # RSI on _The Changelog_ podcast
 I'm catching up on podcast listening and finished [Changelog Episode   423](https://changelog.com/podcast/423) with [Josh Comeau](https://www.joshwcomeau.com/) where he talks about how [Repetitive Strain Injury](http://en.wikipedia.org/wiki/Repetitive_strain_injury) (RSI) basically left him unable to write code using his hands.

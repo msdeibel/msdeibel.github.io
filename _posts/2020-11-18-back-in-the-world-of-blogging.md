@@ -2,7 +2,7 @@
 layout: post
 title:  "Back in the world of blogging"
 date:   2020-11-18 21:09:06 +0100
-categories: blog
+categories: blog en
 ---
 So here it is, my first step in the return to the world of blogging.
 
