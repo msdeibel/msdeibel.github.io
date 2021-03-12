@@ -12,7 +12,7 @@ Josh was (is still) not in the lucky position that it just went away after a few
 I have crossed paths with RSI, too. As well as with other pains coders are prone to suffer from. Below's my take on what now do to prevent injuries and what helped me to recover.
 
 # RSI - a coder's nightmare
-So what is RSI exactly? Well, there is not "the one" RSI. The term rather describes a whole set of injuries that can occur when muscel and sinews are doing the same movement over and over again over a long period of time. The chance of catching one also increases if the respective parts do not get much other "workout".
+So what is RSI exactly? Well, there is not "the one" RSI. The term rather describes a whole set of injuries that can occur when muscels and sinews are doing the same movement over and over again over a long period of time. The chance of catching one also increases if the respective parts do not get much other "workout".
 
 Probably the medical condition in this area known to most people is [Carpal Tunnel Syndrome](http://en.wikipedia.org/wiki/Carpal_tunnel_syndrome) (CTS).
 
@@ -21,7 +21,7 @@ It comes down to
 
 Source: [http://en.wikipedia.org/wiki/Carpal_tunnel_syndrome](http://en.wikipedia.org/wiki/Carpal_tunnel_syndrome)
 
-If you have these symptoms you should **act immediately** and see doctor. Untreated the condition can worsen to a point where it can only be treated with surgery or it can even become cronical.
+If you have these symptoms you should **act immediately** and see a doctor. Untreated the condition can worsen to a point where it can only be treated with surgery or it can even become cronical.
 
 # My experience with RSI
 
