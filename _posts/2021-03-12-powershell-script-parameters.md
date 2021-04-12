@@ -1,69 +1,68 @@
 ---
 layout: post
-title:  "Pflichtparameter mit Standardwerten in Powershell-Skripten"
+title:  "Mandatory parameters with default values in Powershell"
 date:   2021-03-12 07:40:42 +0100
-categories: powershell coding de
+categories: powershell coding en
 ---
 
-## Komfort und Funktionssicherung
-Diese Woche hatte ich die Anforderung ein Powershell-Skript zu erweitern. Dabei ging es um einen Bugfix, aber auch darum, den Aufruf anwenderfreundlicher zu gestalten.
+## Comfort and functional security
+This week I had a requirement to extend a powershell script. This was for a bug fix, but also to make the call more user-friendly.
 
-Vorher hat das Skript eine einzelne Datei bearbeitet, deren kompletter Pfad vom Benutzer abgefragt wurde. Allerdings war in der Originalanforderung nicht festgehalten, dass der Benutzer das Skript fuer knappe 200 Dateien aufrufen muss. Und wenn ich von "Benutzer" rede, denkt man direkt an jemanden, der nicht unbedingt weiss, dass er/sie sich relativ leicht eine Schleife in Powershell bauen kann, die das automatisiert.
+Previously, the script processed a single file whose full path had to be provided by the user. However, the original request did not state that the user had to call the script for just under 200 files. And when I say "user", one immediately thinks of someone who doesn't necessarily know that he/she can relatively easily build a loop in Powershell that automates this.
 
-Daher hiess es, den Aufruf zu verbessern.
+So it was a matter of improving the call.
 
-## Parameterabsicherung bei Powershell
-Nachdem die inhaltlichen Fehler relativ schnell abgearbeitet waren, ging es an die Komfortfunktionen.
+## Parameter protection in Powershell
+After the content errors were worked off relatively quickly, it was time to work on the comfort functions.
 
-Allerdings darf mit dem Komfort natuerlich die Absicherung der Funktionalitaet nicht leiden. In diesem Fall hiess das, dass das Skript auf jeden Fall ohne Fehler starten muss - auch in einer automatisierten Umgebung. Daraus ergaben sich folgende Eckpunkte
-- Uebergabe des Verzeichnisses mit den Dateien, statt eine einzelne Datei als Kommandozeilenparameter
-- Benutzerabfrage, falls kein Kommandozeilenparameter vorliegt
-- Start mit leerer Benutzereingabe erlauben
-- Erlauben von Pfaden mit Leerzeichen
+However, securing the functionality must not suffer with the comfort. In this case, the script had to start without errors - even in an automated environment. This resulted in the following key points
+- Provide the directory, instead of a single file as command line parameter.
+- User query if no command line parameter is available
+- Allow start with empty user input
+- Allow paths with blanks
 
-Parameter lassen sich bereits mit Bordmitteln der Powershell in gewissem Masse absichern. Dazu gehoeren z.B. Typ, Null-Sicherung und Pflichtparameter. Details dazu finden sich in der Microsoft-eigenen Doku auf [about_parameters](https://docs.microsoft.com/de-de/powershell/module/microsoft.powershell.core/about/about_parameters).
+Parameters can already be secured to a certain extent with on-board means of Powershell. This includes, for example, typed, not-null-protected and mandatory parameters. Details can be found in Microsoft's own documentation on [about_parameters](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_parameters).
 
-# Die Basis ist unflexibel
-Leider sind die Absicherungsmoeglichkeiten etwas unflexibel und passen nicht zum o.g. Szenario.
+# The basis is inflexible
+Unfortunately, the protection options are somewhat inflexible and do not fit the above scenario.
 
-Ein Parameter kann eine Pflichtangabe sein
+A parameter can be a mandatory
 ```powershell
 param ([Parameter(Mandatory)]$servername)
 ```
-aber in diesem Fall kann man keinen Standardwert mehr zuweisen.
-D.h. man kann bei fehlendem Kommandozeilenparameter nicht einfach einen Standardwert setzen wie es mit
+but in this case you cannot assign a default value.
+I.e. if the command line parameter is missing, you cannot simply set a default value as you can with
 ```powershell
 param ($servername = 'server01')
 ```
-moeglich ist.
 
-Auch eine laengere Suche im Netz liess mich immer wieder zum selben Ergebnis kommen: Selber programmieren ist angesagt.
+Even a long search on the net led me to the same result over and over again: You have to program it yourself.
 
-## Komfortabel und abgesichert
-Der Code bei dem ich am Ende gelandet bin, umfasst nur einige Zeilen, die das Ziel erreichen.
+## Comfortable and secure
+The code I ended up with consists of only a few lines that achieve the goal.
 
 ```powershell
-Param ([string]$parameterKommandoZeile)
+Param ([string]$parameterCommandLine)
 
-[string]$parameter = $parameterKommandoZeile
+[string]$parameter = $parameterCommandLine
 
-# Bei fehlendem Parameter, Benutzereingabe anfordern
+# If parameter is missing, request user input
 if($parameter -eq "") {
-  $parameter = (Read-Host -prompt "Parameter eingeben (leer - aktuelles Verzeichnis")
+  $parameter = (Read-Host -prompt "Enter parameter (empty - current directory")
 }
 
-# Falls die Benutzereingabe auch leer ist, aktuelles Verzeichnis verwenden
+# If user input is also empty, use current directory
 if($parameter -eq "") {
   $parameter = '.\'
 }
 
-# Leerzeichen escapen
+# escape blanks
 $parameter -replace ' ', '` '
 
-# Sicherstellen, dass der Pfad mit \ endet
-if(!$paramert.EndsWith('\')) {
+# make sure the path ends with \
+if(!$parameter.EndsWith('\')) {
   $parameter = $parameter + '\'
 }
 ```
 
-Mit wenigen Handgriffen, haben wir damit ein flexibles Szenario, was die Parameterauswertung angeht.
+With a few simple steps, we have a flexible scenario as far as parameter evaluation is concerned.
