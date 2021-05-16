@@ -1,9 +1,9 @@
-----
+---
 layout: post
 title:  "Powershell voice output"
-date:   2021-05-16 08:28:00 +0100
+date:   2021-05-16 07:28:00 +0100
 categories: powershell productivity de
-----
+---
 # I'm Afraid I Can't Do That, Dave.
 Mit diesem Satz beendet HAL 9000 vermeintlich die Existenz seiner Crew im Film _2001 - A Space Odyssey_.
 
@@ -25,7 +25,8 @@ Als erstes wollte ich die dauernden Wechsel ins SSMS loswerden und habe ein Powe
 ich Job bzw. Wiederherstellung antriggern kann.
 
 Für den Job sieht das so aus
-```Powershell
+
+```powershell
 Param
   (
     [parameter(Mandatory=$true)][string] $SQLServer,
@@ -84,7 +85,8 @@ Klar, ich könnte versuchen das Fenster in den Vordergrund zu bringen, aber das 
 
 Eine Alternative wäre Sprachausgabe. Die Powershell ist so gut in Windows integriert, die muss das können.
 Natürlich kann sie das [[1]](#1) und es braucht nur drei Zeilen Code am Ende des Skripts:
-```Powershell
+
+```powershell
 # Create a new SpVoice objects
 $voice = New-Object -ComObject Sapi.spvoice
 
@@ -97,6 +99,7 @@ $voice.speak("Der SQL Job $($jobName) ist beendet")
 Je nach Name des Jobs braucht es etwas Fantasie die Aussprache zu erkennen, aber das Grundprinzip funktioniert.
 Damit muss ich nicht mehr bewusst den Kontext wechseln, solange es nicht nötig ist.
 
----
+<hr/>
 Quellen
+
 <a name="1"></a>[1] [How do you get Windows Powershell to play a sound after .bat job has finished running?](https://stackoverflow.com/questions/56032478/how-do-you-get-windows-powershell-to-play-a-sound-after-bat-job-has-finished-ru)

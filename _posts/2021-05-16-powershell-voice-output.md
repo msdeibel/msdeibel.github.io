@@ -1,9 +1,9 @@
-----
+---
 layout: post
 title:  "Powershell voice output"
-date:   2021-05-16 08:28:00 +0100
+date:   2021-05-16 07:28:00 +0100
 categories: powershell productivity de
-----
+---
 # I'm Afraid I Can't Do That, Dave.
 With this sentence, HAL 9000 supposedly ends the existence of its crew in the film _2001 - A Space Odyssey_.
 
@@ -22,7 +22,7 @@ First of all, I wanted to get rid of the constant switches to the SSMS and thus 
 
 For the job it looks like this
 
-```Powershell
+```powershell
 Param
   (
     [parameter(Mandatory=$true)][string] $SQLServer,
@@ -80,7 +80,8 @@ Sure, I could try to bring the window to the foreground, but that's a bit compli
 
 An alternative would be voice output. Powershell is so well integrated into Windows, it must be able to do that.
 Of course it is [[1]](#1) and it only needs three lines of code at the end of the script:
-```Powershell
+
+```powershell
 # Create a new SpVoice objects
 $voice = New-Object -ComObject Sapi.spvoice
 
@@ -90,9 +91,11 @@ $voice.rate = 0
 # Say something
 $voice.speak("The SQL job $($jobName) has finished")
 ```
+
 Depending on the name of the job, it takes some imagination to recognise the pronunciation, but the basic principle works.
 This way I don't have to consciously change the context anymore, as long as it's not necessary.
 
----
+<hr/>
 Sources
+
 <a name="1"></a>[1] [How do you get Windows Powershell to play a sound after .bat job has finished running?](https://stackoverflow.com/questions/56032478/how-do-you-get-windows-powershell-to-play-a-sound-after-bat-job-has-finished-ru)
