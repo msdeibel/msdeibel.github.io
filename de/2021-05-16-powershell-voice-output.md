@@ -1,10 +1,10 @@
----
-layout: post
-title:  "Powershell Sprachausgabe"
-date:   2021-05-16 07:28:00 +0100
-categories: powershell productivity
-language: de
----
+#---
+#layout: post
+#title:  "Powershell Sprachausgabe"
+#date:   2021-05-16 07:28:00 +0100
+#categories: powershell productivity
+#language: de
+#---
 # I'm Afraid I Can't Do That, Dave.
 Mit diesem Satz beendet HAL 9000 vermeintlich die Existenz seiner Crew im Film _2001 - A Space Odyssey_.
 
