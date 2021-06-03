@@ -1,10 +1,20 @@
-#---
-#layout: post
-#title:  "Powershell Sprachausgabe"
-#date:   2021-05-16 07:28:00 +0100
-#categories: powershell productivity
-#language: de
-#---
+---
+layout: post
+title:  "Powershell Sprachausgabe"
+date:   2021-05-16 07:28:00 +0100
+categories: powershell productivity
+postLink: powershellvoiceoutput
+---
+{% assign relatedPosts=site.documents | where:"postLink", page.postLink | sort: 'language' %}
+
+<div class="language">
+|
+    {% for p in relatedPosts %}
+      <a class="{{ p.language }}" href="{{ site.base-url }}{{ p.url }}">{{ p.language }}</a> |
+    {% endfor %}
+</div><br/>
+<hr>
+<br/>
 # I'm Afraid I Can't Do That, Dave.
 Mit diesem Satz beendet HAL 9000 vermeintlich die Existenz seiner Crew im Film _2001 - A Space Odyssey_.
 
@@ -15,14 +25,14 @@ und wie sie sinnvoll eingesetzt werden kann.
 
 # Wann ist der SQL Job fertig?
 Ich habe vor zwei Wochen einen Bug bearbeitet, dessen Analyse das wiederholte Ausführen von Jobs sowie
-mehrere Wiederherstellungen einer DB auf einem SQL-Server erforderte. Der Job lief ca. 15 Minuten und 
+mehrere Wiederherstellungen einer DB auf einem SQL-Server erforderte. Der Job lief ca. 15 Minuten und
 die Restore-Operation ca. 20.
 
 Jetzt kann man sich natürlich einen Timer stellen oder alle zwei Minuten im Management Studio die Job-Uebersicht aktualisieren,
 aber das ist alles Overhead und lenkt von Sachen ab, die man sinnvoll nebenher erledigen kann.
 
 ## Powershell Skript als Ansatz
-Als erstes wollte ich die dauernden Wechsel ins SSMS loswerden und habe ein Powershellskript geschrieben, mit dem 
+Als erstes wollte ich die dauernden Wechsel ins SSMS loswerden und habe ein Powershellskript geschrieben, mit dem
 ich Job bzw. Wiederherstellung antriggern kann.
 
 Für den Job sieht das so aus
@@ -40,10 +50,10 @@ Param
 $query = "SELECT top 1
 ja.job_id,
 j.name AS job_name,
-ja.start_execution_date,      
+ja.start_execution_date,
 ISNULL(last_executed_step_id,0)+1 AS current_executed_step_id,
 Js.step_name
-FROM msdb.dbo.sysjobactivity ja 
+FROM msdb.dbo.sysjobactivity ja
 LEFT JOIN msdb.dbo.sysjobhistory jh ON ja.job_history_id = jh.instance_id
 JOIN msdb.dbo.sysjobs j ON ja.job_id = j.job_id
 JOIN msdb.dbo.sysjobsteps js

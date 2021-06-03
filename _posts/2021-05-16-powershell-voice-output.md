@@ -3,8 +3,18 @@ layout: post
 title:  "Powershell voice output"
 date:   2021-05-16 07:28:00 +0100
 categories: powershell productivity
-language: en
+postLink: powershellvoiceoutput
 ---
+{% assign relatedPosts=site.documents | where:"postLink", page.postLink | sort: 'language' %}
+
+<div class="language">
+|
+    {% for p in relatedPosts %}
+      <a class="{{ p.language }}" href="{{ site.base-url }}{{ p.url }}">{{ p.language }}</a> |
+    {% endfor %}
+</div><br/>
+<hr>
+<br/>
 # I'm Afraid I Can't Do That, Dave.
 With this sentence, HAL 9000 supposedly ends the existence of its crew in the film _2001 - A Space Odyssey_.
 

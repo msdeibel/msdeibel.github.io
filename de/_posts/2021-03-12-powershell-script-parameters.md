@@ -1,10 +1,20 @@
-#---
-#layout: post
-#title:  "Pflichtparameter mit Standardwerten in Powershell-Skripten"
-#date:   2021-03-12 07:40:42 +0100
-#categories: powershell coding de
-#---
+---
+layout: post
+title:  "Pflichtparameter mit Standardwerten in Powershell-Skripten"
+date:   2021-03-12 07:40:42 +0100
+categories: powershell coding
+postLink: powershelldefaultparameters
+---
+{% assign relatedPosts=site.documents | where:"postLink", page.postLink | sort: 'language' %}
 
+<div class="language">
+|
+    {% for p in relatedPosts %}
+      <a class="{{ p.language }}" href="{{ site.base-url }}{{ p.url }}">{{ p.language }}</a> |
+    {% endfor %}
+</div><br/>
+<hr>
+<br/>
 ## Komfort und Funktionssicherung
 Diese Woche hatte ich die Anforderung ein Powershell-Skript zu erweitern. Dabei ging es um einen Bugfix, aber auch darum, den Aufruf anwenderfreundlicher zu gestalten.
 

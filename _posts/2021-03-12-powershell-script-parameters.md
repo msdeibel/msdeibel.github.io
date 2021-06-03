@@ -2,9 +2,19 @@
 layout: post
 title:  "Mandatory parameters with default values in Powershell"
 date:   2021-03-12 07:40:42 +0100
-categories: powershell coding en
+categories: powershell coding
+postLink: powershelldefaultparameters
 ---
+{% assign relatedPosts=site.documents | where:"postLink", page.postLink | sort: 'language' %}
 
+<div class="language">
+|
+    {% for p in relatedPosts %}
+      <a class="{{ p.language }}" href="{{ site.base-url }}{{ p.url }}">{{ p.language }}</a> |
+    {% endfor %}
+</div><br/>
+<hr>
+<br/>
 ## Comfort and functional security
 This week I had a requirement to extend a powershell script. This was for a bug fix, but also to make the call more user-friendly.
 

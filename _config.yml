@@ -52,3 +52,21 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+defaults:
+    -
+     scope:
+         path: ""
+     values:
+         author: "msdeibel"
+         layout: Layout
+         language: en
+         base-url: "/"
+    -
+     scope:
+         path: de
+     values:
+         author: "msdeibel"
+         layout: Layout
+         language: de
+         base-url: "/de/"
