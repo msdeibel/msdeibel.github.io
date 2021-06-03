@@ -32,10 +32,10 @@ Nehmen wir ein Alphabet mit zehn Zeichen, z.B. die Zahlen 0-9, und vergleichen e
 Dann ergeben sich daraus folgende (ungefähre) Werte für die Anzahl möglicher Kombinationen:
 
 <table>
-    <tr><th>Anzahl Zeichen</br>im Passwort</th><th colspan="2">Alphabetgröße</th></tr>
-    <tr><td></td><th>10</th><th>26</th</tr>
-    <tr><th>5</th><td>10<sup>5</sup></td><td>10<sup>7</sup></td</tr>
-    <tr><th>15</th><td>10<sup>15</sup></td><td>10<sup>18</sup></td</tr>
+    <tr><th>Number of characters<br/>in the password</th><th colspan="2">alphabet size</th></tr>
+    <tr><td></td><th>10</th><th>26</th></tr>
+    <tr><th>5</th><td>10<sup>5</sup></td><td>10<sup>7</sup></td></tr>
+    <tr><th>15</th><td>10<sup>15</sup></td><td>10<sup>18</sup></td></tr>
 </table>
 
 Die Anzahl der Zeichen im Passwort ist also aus kombinatorischer Sicht wesentlich wichtiger als die Anzahl der Zeichen des Alphabetes aus dem das Passwort gebildet wird.

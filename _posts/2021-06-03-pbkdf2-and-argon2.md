@@ -32,10 +32,10 @@ Let's take an alphabet with ten characters, e.g. the numbers 0-9, and compare it
 Then we get the following (approximate) values for the number of possible combinations:
 
 <table>
-    <tr><th>Number of characters</br>in the password</th><th colspan="2">alphabet size</th></tr>.
-    <tr><td></td><th>10</th><th>26</th</tr>
-    <tr><th>5</th><td>10<sup>5</sup></td><td>10<sup>7</sup></td</tr>
-    <tr><th>15</th><td>10<sup>15</sup></td><td>10<sup>18</sup></td</tr>
+    <tr><th>Number of characters<br/>in the password</th><th colspan="2">alphabet size</th></tr>
+    <tr><td></td><th>10</th><th>26</th></tr>
+    <tr><th>5</th><td>10<sup>5</sup></td><td>10<sup>7</sup></td></tr>
+    <tr><th>15</th><td>10<sup>15</sup></td><td>10<sup>18</sup></td></tr>
 </table>
 
 So, from a combinatorial point of view, the number of characters in the password is much more important than the number of characters in the alphabet from which the password is formed.
