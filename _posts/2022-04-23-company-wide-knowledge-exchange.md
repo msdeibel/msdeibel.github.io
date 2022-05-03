@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Firmenweiter Wissensaustausch"
+title:  "Company wide knowledge exchange"
 date:   2022-04-23 07:51:53 +0100
 categories: knowledge information exchange culture
 postLink: knowledgeexchange
@@ -15,62 +15,46 @@ postLink: knowledgeexchange
 </div><br/>
 <hr>
 <br/>
-Es ist jetzt schon einen Weile her, da wurde ich mit der Aufgabe betraut, die Verschluesselung
-in einem existierenden Projekt zu verbessern.
+It's been a while now since I was given the task of improving the encryption in an existing project.
 
-Die Aufgabe hat zunaechst in mir kein Hochgefuehl ausgeloest, da ich seit dem Studium (und das ist
-schon eine Weile her), Verschluessellung praktisch nur als Endnutzer verwendet habe, aber mit den Details
-der Implementierung eher weniger bewandert bin.
+The task didn't initially make me feel very good, because since university (and that was a while ago) I had used encryption practically only as an end-user, but I am less familiar with the details of the implementation.
 
-Da es meinen KollegInnen im Projekt aber aehnlich ging, war es dann auch egal auf wen das Los fiel.
+Since my colleagues in the project felt the same way, it didn't matter who tackled the task.
 
-## Hintergrund
+## Background
 
-Der Verschluessellungscode, um den es ging war bei einem PEN Test aufgefallen und als erhoehtes Risiko
-fuer einen Angriff eingestuft worden. Die besagte Software ist zwar nicht direkt mit dem Backend im Web verbunden,
-kann aber zur Datenmanipulation verwendet werden. Die Daten die in dem Programm verarbeitet werden, werden danach
-per Import in das eigentliche Produkt importiert.
+The encryption code in question had come to light during a PEN test and had been classified as an increased risk for an attack.
+The software in question is not directly connected to the backend on the web,
+but can be used to manipulate data. The data processed in the programme is then imported into the actual product.
 
-Die bis dahin verwendete Verschluessellungsmethode ist allerdings nicht aus versehen implementiert worden,
-sondern basiert auf spezifischen Anforderung der fachlichen Seite des Systems. Man kann also den vorherigen
-Entwicklern hier keinen Vorwurf machen.
+The encryption method used up to this point was not implemented by accident, however,
+but is based on specific requirements of the technical side of the system. So one cannot blame the previous developers for this.
 
-## Erstmal Code lesen
+## First read the code
 
-Ich bin dann damit gestartet mir den eigentlichen Code anzusehen. Wie gesagt, ich bin keine Experte fuer
-Software-Sicherheit, aber vielleicht koennte ich ja Anknuepfungspunkte finden, die sogar fuer mich
-offensichtlich sein muessten.
+I then started to look at the actual code. As I said, I am not an expert in software security, but maybe I could find some points of contact that should be obvious even to me.
 
-Tatsaechlich bin ich auf diesem Weg auch fuendig geworden (s. [PBKDF2 und Argon2]({% link de/_posts/2021-06-03-pbkdf2-and-argon2.md %})
+In fact, this is how I found it (see [PBKDF2 and Argon2]({% post_url 2021-06-03-pbkdf2-and-argon2 %}))
 
-## Infos sammeln
+## Gather info
 
-Mit dem was ich im Code vorgefunden hatte, machte ich mich auf die Suche im Internet.
+With what I had found in the code, I started searching the internet.
 
-Doch wie wird man fuendig, wenn mach nicht weiss wonach man wirklich sucht? Ich musste die gefundenen
-Informationen also irgendwie einordnen. Doch das ist ohne Basiswissen zu Verschluesselungsalgorithmen zum einen schwer und zum anderen gefaehrlich.
-Man will ja nicht noch groessere Sicherheitsluecken aufreissen.
+But how do you find what you are looking for if you don't know what you are really looking for? I had to sort out the information I had found. But without basic knowledge of encryption algorithms, this is both difficult and dangerous.
+You don't want to open up even bigger security gaps.
 
-## Firmennetzwerk anzapfen
+## Tapping into the corporate network
 
-Es gibt mit Reddit, Slack, Stackoverflow etc. jede Menge Seiten und Dienste auf denen man Wissen von
-Experten geboten bekommt, aber manchmal eben nicht zeitnah und qualitativ doch fragwuerdig.
+With Reddit, Slack, Stackoverflow etc. there are lots of sites and services where you can get knowledge from experts, but sometimes not in a timely manner and of questionable quality.
 
-Wenn man, so wie ich, bei einer Software-Firma angestellt ist, sollte man auch hier alle Hebel in Bewegung setzen,
-um evtl. an das benoetigte Wissen zu kommen. Unfassbarer Weise ist es naemlich so, dass die KollegInnen in der
-Regel auch helfen wollen wo sie nur koennen. Selbst wenn man sich vorher noch nie persoenlich kennengelernt hat.
+If, like me, you are employed by a software company, you should pull out all the strings here too, to get the knowledge you need. Unbelievably, colleagues usually want to help wherever they can. Even if you have never met in person before.
 
-Hierzu muss man natuerlich die Kommunikationswege im Unternehmen kennen. Bei uns wird [Rocket Chat](https://rocket.chat/) als
-Slack-Alternative verwendet. Es gibt einen grossen Kanal, in dem fast alle MitarbeiterInnen vertreten sind und
-mindestens ein Dutzend ist auch immer online.
+Of course, you have to know the communication channels within the company. We use [Rocket Chat](https://rocket.chat/) as a Slack alternative. There is one big channel in which almost all employees are present and at least a dozen are always online.
 
-## Ich weiss wer dir helfen kann
+## I know who can help you
 
-Natuerlich kann nicht jede/r die/der in diesem Chat mitliest direkt helfen, aber es koennen auf diesem Weg
-schnell ein paar Personen angetriggert werden. Unter dem Motto, "ich kann dir nicht helfen, aber schreib mal Simona an,
-die hat das in einem vorherigen Projekt auf jeden Fall schon mal gemacht."
+Of course, not everyone who reads this chat can help directly, but it can be a quick way to trigger a few people. Under the motto, "I can't help you, but write to Simona, she's definitely done this before in a previous project."
 
-Auf dem Weg habe ich dann einen unserer Geschaeftsfuehrer ans Telefon bekommen, der mir in 15 Minuten, alles erklaert
-hat was ich zur Loesung des Problems brauchte.
+On the way I got one of our managers on the phone, who explained everything I needed to know to solve the problem in 15 minutes.
 
-In so einer Umgebung/Firmenkultur schlagen kurze Kommunkationswege fast alles was das Internet zu bieten hat.
+In such an environment/corporate culture, short lines of communication beat almost anything the internet has to offer.
